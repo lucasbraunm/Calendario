@@ -1,0 +1,83 @@
+main .form-control
+{
+  /* center form controls */
+  display: inline-block;
+
+  /* override Bootstrap's 100% width for form controls */
+  width: 30%; 
+}
+
+.form-row {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-row .form-control {
+  width: 100%;
+}
+
+.nav-link {
+  background-color: transparent;
+}
+
+.navbar-nav {
+  margin-bottom: 4px;
+}
+
+.dropdown-toggle {
+  float: left;
+}
+
+main
+{
+  /* scroll horizontally as needed */
+  overflow-x: auto;
+
+  /* center contents */
+  text-align: center;
+}
+
+main img
+{
+  /* constrain images on small screens */
+  max-width: 100%;
+}
+
+#accordion {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2
+{
+  margin: 20px;
+}
+
+.modal-body .form-row {
+  width: 100%;
+}
+
+#appointment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  height: 75vh;
+}
+
+.appointments {
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media screen and (max-width:750px)
+{
+  main .form-control, .form-row {width: 50%;}
+}
+
+@media screen and (max-width:600px)
+{
+  #appointment-container {grid-template-columns: 1fr;}
+}
