@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Add Events
+{% endblock %}
+
+{% block main %}
+    <h2>Add new event</h2>
+
+    <form action="/events" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Title of event" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Add more details</label><br>
+            <textarea class="form-control" name="text" rows="3"></textarea>
+            <small class="form-text text-muted">Optional</small>
+        </div>
+        <div class="form-group">
+            <label>Day of Event</label><br>
+            <input class="form-control" name="date" type="date" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <label>Start of Event</label><br>
+                <input class="form-control" name="start-time" type="time" id="start-time" required>
+            </div>
+            <div class="form-group col">
+                <label>End of Event</label><br>
+                <input class="form-control" name="end-time" type="time" id="end-time" min="" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Add event</button>
+    </form>
+    <script>
+        document.getElementById("start-time").onchange = function ()
+        {
+        var input = document.getElementById("end-time");
+        input.setAttribute("min", document.getElementById("start-time").value);
+        }
+    </script>
+{% endblock %}

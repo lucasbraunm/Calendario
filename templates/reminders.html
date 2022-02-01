@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    | Add Reminders
+{% endblock %}
+
+{% block main %}
+    <h2>Add new reminder</h2>
+
+    <form action="/reminders" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Title of reminder" type="text" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="time" type="date" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Add reminder</button>
+    </form>
+{% endblock %}

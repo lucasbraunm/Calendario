@@ -1,0 +1,182 @@
+:root {
+    --var-color: #3074b3;
+  }
+
+.event-header button {
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 0;
+    color: #777;
+    font-size: 15px;
+    text-align: center;
+}
+
+.collapse #reminder-header, .collapsing #reminder-header {
+    margin-top: 15px;
+}
+
+.collapse .card {
+    color: black;
+    margin: 8px 0;
+}
+  
+.collapsing {
+    margin: 8px -0;
+}
+  
+.card .event-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      ". title add";
+    padding-bottom: 8px;
+}
+
+.card h4 {
+    grid-area: title;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+.card .button-add-container {
+    grid-area: add;
+    text-align: right;
+}
+  
+.card .button-add-container button {
+    font-size: 15px;
+    border: solid 1px #666;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 6px;
+}
+  
+.modal-body .form-control {
+    display: inline-block;
+    width: 95%; 
+}
+  
+.card .card-event, .card .card-reminder, .card .card-event-grid {
+    background-color: #eee;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 0.8rem;
+}
+  
+.card .card-reminder .card-title {
+    text-align: left;
+    padding-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+  
+.card .card-reminder .card-title p {
+    color: var(--var-color);
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+  
+.card .card-reminder .card-title span {
+    color: black;
+}
+  
+.card .card-date {
+    grid-area: header;
+}
+  
+.card .card-date p {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+}
+  
+.card .card-time {
+    grid-area: sidebar;
+    display: flex;
+}
+  
+.card .rectangle {
+    height: 90%;
+    width: 8px;
+    background-color: var(--var-color);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+.card .card-time .card-time-div {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 2px;
+    padding-left: 8px;
+}
+  
+.card .card-event-grid .card-title {
+    grid-area: title; 
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+}
+  
+.card .card-title h6, .card .card-reminder h6 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+.card .card-text {
+    color: #777;
+    grid-area: text;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    text-align: left;
+    padding-bottom: 4px;
+}
+  
+.card .card-event-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header header header header header header header"
+      "sidebar title title title text text text text text text";
+}
+
+.event-header button:hover {
+    color: #444;
+    transform: scale(1.08);
+    background-color: #ddd;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:950px) {
+ 
+}
+
+@media screen and (max-width:745px) {
+    .card-event-grid, .card-reminder, .card-event {font-size: 15px;}
+    .card-title h6 {font-size: 17px;}
+}
+
+@media screen and (max-width:600px) {
+    .card-event-grid, .card-reminder, .card-event {font-size: 14px;}
+    .card-title h6 {font-size: 16px;}
+}
+
+@media screen and (max-width: 480px) {
+    .card-event-grid, .card-reminder, .card-event {font-size: 13px;}
+    .card-title h6 {font-size: 14px;}
+}
+
+@media screen and (max-width: 360px) {
+    .card-event-grid, .card-reminder, .card-event {font-size: 12px;}
+    .card-title h6 {font-size: 13px;}
+}
